@@ -1,0 +1,69 @@
+$white--color: #e3e4e6
+$blue--color: #5778a3
+$red--color: #ee5873
+$green--color: #3b999b
+  
+  
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Poppins', sans-serif
+  font-size: 24px  
+
+.click
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  gap: 0.2em
+  position: absolute
+  top: 1em
+  right: 1.5em
+  cursor: pointer
+  z-index: 1
+  >.icon-burger
+    width: 30px
+    height: 4px
+    background-color: #000
+    border-radius: 10px
+    transition: .5s
+    transform-origin: center
+  >.mid.active
+    transform: translateX(100%)
+    opacity: 0
+  >.top.active
+    transform: rotate(-45deg) translateY(300%) 
+  >.bot.active
+    transform: rotate(45deg) translateY(-300%)
+
+
+.nav
+  background-color: $blue--color
+  width: 100%
+  position: fixed
+  left: 0
+  top: -40%
+  transition: .8s
+  &.active
+    top: 0
+  >nav
+    padding: 2em
+    >ul
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      gap: 1em
+      >li
+        list-style: none
+        >a
+          text-decoration: none
+          color: $white--color 
+          transition: .3s
+          &:hover
+            padding-left: 1em
+            color: $red--color
+        >img
+          

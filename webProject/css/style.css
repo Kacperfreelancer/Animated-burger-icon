@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+}
+
+.click {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.2em;
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.click > .icon-burger {
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 10px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.click > .mid.active {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+.click > .top.active {
+  -webkit-transform: rotate(-45deg) translateY(300%);
+          transform: rotate(-45deg) translateY(300%);
+}
+
+.click > .bot.active {
+  -webkit-transform: rotate(45deg) translateY(-300%);
+          transform: rotate(45deg) translateY(-300%);
+}
+
+.nav {
+  background-color: #5778a3;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: -40%;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+.nav.active {
+  top: 0;
+}
+
+.nav > nav {
+  padding: 2em;
+}
+
+.nav > nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 1em;
+}
+
+.nav > nav > ul > li {
+  list-style: none;
+}
+
+.nav > nav > ul > li > a {
+  text-decoration: none;
+  color: #e3e4e6;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.nav > nav > ul > li > a:hover {
+  padding-left: 1em;
+  color: #ee5873;
+}
+/*# sourceMappingURL=style.css.map */
